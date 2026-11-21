@@ -18,6 +18,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.myapplication.logic.FileUiState
 import com.example.myapplication.logic.FileViewModel
+import com.example.myapplication.ui.theme.ParagraphText
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -104,10 +105,7 @@ fun MainScreen(viewModel: FileViewModel = viewModel()) {
                         verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
                         items(paragraphs) { paragraph ->
-                            Text(
-                                text = paragraph,
-                                style = MaterialTheme.typography.bodyLarge
-                            )
+                            ParagraphText(text = paragraph)
                         }
                     }
                 }
