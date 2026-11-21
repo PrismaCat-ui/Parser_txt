@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.myapplication.logic.FileUiState
@@ -107,8 +106,7 @@ fun MainScreen(viewModel: FileViewModel = viewModel()) {
                         items(paragraphs) { paragraph ->
                             Text(
                                 text = paragraph,
-                                fontSize = 16.sp,
-                                lineHeight = 24.sp
+                                style = MaterialTheme.typography.bodyLarge
                             )
                         }
                     }
